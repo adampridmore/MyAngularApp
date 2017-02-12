@@ -2,7 +2,7 @@
 
 namespace MyAngularApp
 {
-    public static class Routing
+    public static class WebApiRouteConfig
     {
         public static void Register(HttpConfiguration config)
         {
