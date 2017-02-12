@@ -124,6 +124,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\components\peopleList\peopleList-template.html" />
     <Content Include="app\components\peopleList\peopleList.js" />
+    <Content Include="app\DataService.js" />
     <Content Include="app\views\People\people-template.html" />
     <Content Include="app\views\People\people.js" />
     <Content Include="app\views\View1\view1-template.html" />
