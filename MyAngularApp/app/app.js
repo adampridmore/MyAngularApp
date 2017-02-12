@@ -1,19 +1,36 @@
 ﻿(function() {
-    angular
-        .module("myApp", [])
-        .controller("myAppController",
-        [
-            "$http", function($http) {
-                var controller = this;
+    var myApp = angular
+        .module("myApp", ["ngRoute"]);
 
-                var url = "/Api/MyAppApi/123";
-                this.title = "App Title";
-                $http
-                    .get(url)
-                    .then(function(responce) {
-                        console.log(responce.data);
-                        controller.people = responce.data;
-                    });
-            }
-        ]);
+    myApp.controller("myAppController",
+    [
+        "$http", function($http) {
+            var controller = this;
+
+            var url = "/Api/MyAppApi/123";
+            this.title = "App Title";
+            $http
+                .get(url)
+                .then(function(responce) {
+                    console.log(responce.data);
+                    controller.people = responce.data;
+                });
+        }
+    ]);
+
+    myApp.config([
+        '$locationProvider','$routeProvider',
+        function ($locationProvider, $routeProvider) {
+            $locationProvider.html5Mode(true);
+            $routeProvider.when('/View1',
+                {
+                    templateUrl: '/app/views/View1/view1-template.html',
+                    controller: 'view1Controller'
+                })
+                .otherwise({
+                    templateUrl: '/app/views/View2/view2-template.html',
+                    controller: 'view2Controller'
+                });
+        }
+    ]);
 })();
