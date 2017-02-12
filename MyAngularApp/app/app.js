@@ -4,12 +4,10 @@
         .controller("myAppController",
         [
             "$http", function($http) {
-                var url = "/Api/MyAppApi/123";
-
-                this.title = "App Title";
-
                 var controller = this;
 
+                var url = "/Api/MyAppApi/123";
+                this.title = "App Title";
                 $http
                     .get(url)
                     .then(function(responce) {
