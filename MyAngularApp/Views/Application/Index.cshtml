@@ -15,13 +15,15 @@
 <body>
 <div ng-show>Loading..</div>
 
-<div ng-view></div>
-
 <div class="ng-cloak">
-  <div data-ng-controller="myAppController as myApp">
-    {{myApp.title}}
-    <people-list people="myApp.people"></people-list>
-  </div>
+  <ul>
+    <li><a href="/Application/View1">View 1</a></li>
+    <li><a href="/Application/View2">View 2</a></li>
+    <li><a href="/Application/People">People</a></li>
+  </ul>
+  
+  <div ng-view/>
+
 </div>
 
 @Scripts.Render("~/angular/js")
