@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+  <title>Hello World</title>
+  <meta charset="utf-8"/>
+</head>
+<body data-ng-controller="myAppController as myApp">
+<table>
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr data-ng-repeat="person in myApp.people">
+    <td>{{person.name}}</td>
+    <td>{{person.age}}</td>
+  </tr>
+  </tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
