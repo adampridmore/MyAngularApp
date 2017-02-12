@@ -25,11 +25,13 @@
             $routeProvider.when('/View1',
                 {
                     templateUrl: '/app/views/View1/view1-template.html',
-                    controller: 'view1Controller'
+                    controller: 'view1Controller',
+                    controllerAs: 'vm'
                 })
                 .otherwise({
                     templateUrl: '/app/views/View2/view2-template.html',
-                    controller: 'view2Controller'
+                    controller: 'view2Controller',
+                    controllerAs: 'vm'
                 });
         }
     ]);
