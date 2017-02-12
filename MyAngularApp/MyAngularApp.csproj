@@ -82,6 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\peopleList\peopleList-template.html" />
+    <Content Include="app\components\peopleList\peopleList.js" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Web.config" />

@@ -1,14 +1,19 @@
 ﻿angular
     .module('myApp', [])
-    .controller('myAppController', ["$scope", "$http", Controller]);
+    .controller('myAppController',
+    [
+        "$http", function($http) {
+            var url = "/Api/MyAppApi/123";
 
-function Controller($scope, $http) {
-    var url = "/Api/MyAppApi/123";
+            this.title = "App Title";
 
-    $http
-        .get(url)
-        .then(function (responce) {
-            console.log(responce.data);
-            $scope.people = responce.data;
-        });
-}
+            var controller = this;
+
+            $http
+                .get(url)
+                .then(function(responce) {
+                    console.log(responce.data);
+                    controller.people = responce.data;
+                });
+        }
+    ]);
