@@ -27,6 +27,11 @@ namespace MyAngularApp
 
             bundles.Add(new ScriptBundle("~/app/js")
                 .IncludeDirectory("~/App","*.js",true));
+
+            bundles.Add(new ScriptBundle("~/angular/js")
+                .Include("~/Scripts/angular.js"));
+
+
         }
     }
 }

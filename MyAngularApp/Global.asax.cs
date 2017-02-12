@@ -16,6 +16,8 @@ namespace MyAngularApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }
