@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Web.Http;
 using System.Web.Http.Results;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -8,18 +9,28 @@ namespace MyAngularApp.Controllers
     public class MyAppApiController : ApiController
     {
         [HttpGet]
-        public JsonResult<Person> Get(string id)
+        public JsonResult<List<Person>> Get(string id)
         {
             var settings = new JsonSerializerSettings
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
 
-            return Json(new Person
+            var data = new List<Person>
             {
-                Name = "Dave",
-                Age = 31
-            },settings);
+                new Person
+                {
+                    Name = "Dave",
+                    Age = 31
+                },
+                new Person
+                {
+                    Name = "Fred",
+                    Age = 35
+                }
+            };
+
+            return Json(data, settings);
         }
     }
 
