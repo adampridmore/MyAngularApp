@@ -2,21 +2,6 @@
     var myApp = angular
         .module("myApp", ["ngRoute"]);
 
-    myApp.controller("myAppController",
-    [
-        "$http", function($http) {
-            var controller = this;
-
-            var url = "/Api/MyAppApi/123";
-            this.title = "App Title";
-            $http
-                .get(url)
-                .then(function(responce) {
-                    controller.people = responce.data;
-                });
-        }
-    ]);
-
     myApp.config([
         "$locationProvider", "$routeProvider",
         function($locationProvider, $routeProvider) {
