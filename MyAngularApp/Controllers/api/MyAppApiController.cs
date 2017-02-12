@@ -4,7 +4,7 @@ using System.Web.Http.Results;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace MyAngularApp.Controllers
+namespace MyAngularApp.Controllers.api
 {
     public class MyAppApiController : ApiController
     {
