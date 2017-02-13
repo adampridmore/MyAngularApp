@@ -13,18 +13,19 @@
 </head>
 
 <body>
-  <div data-ng-app="myApp">
-    <div data-ng-show>Loading..</div>
-    <div class="ng-cloak">
-  
-      <app-menu></app-menu>
-      
-      <div data-ng-view></div>
+<div data-ng-app="myApp">
+  <div data-ng-show>Loading..</div>
+  <div class="ng-cloak">
 
-      @Scripts.Render("~/angular/js")
-      @Scripts.Render("~/app/js")
+    <app-menu></app-menu>
 
-    </div>
+    <div data-ng-view></div>
+    
+    @Scripts.Render("~/angular/js")
+    @Scripts.Render("~/app/js")
+    @Scripts.Render("~/bundles/angular-bootstrap")
+    @Styles.Render("~/Content/css")
   </div>
+</div>
 </body>
 </html>

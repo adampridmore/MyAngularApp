@@ -21,6 +21,12 @@ namespace MyAngularApp
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-bootstrap")
+                .IncludeDirectory("~/Scripts/angular-ui","*.js")
+                );
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
