@@ -16,12 +16,9 @@
   <div data-ng-app="myApp">
     <div data-ng-show>Loading..</div>
     <div class="ng-cloak">
-      <ul>
-        <li><a href="/Application/View1">View 1</a></li>
-        <li><a href="/Application/View2">View 2</a></li>
-        <li><a href="/Application/People">People</a></li>
-      </ul>
-
+  
+      <app-menu></app-menu>
+      
       <div data-ng-view></div>
 
       @Scripts.Render("~/angular/js")

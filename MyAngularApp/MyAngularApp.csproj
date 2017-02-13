@@ -122,6 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\appMenu\appMenu-template.html" />
+    <Content Include="app\components\appMenu\appMenu.js" />
     <Content Include="app\components\peopleList\peopleList-template.html" />
     <Content Include="app\components\peopleList\peopleList.js" />
     <Content Include="app\DataService.js" />
