@@ -2,7 +2,7 @@
   Layout = null;
 }
 <!DOCTYPE html>
-<html data-ng-app="myApp">
+<html>
 <head>
   <title>Hello World</title>
   <meta charset="utf-8"/>
@@ -13,20 +13,21 @@
 </head>
 
 <body>
-<div data-ng-show>Loading..</div>
+  <div data-ng-app="myApp">
+    <div data-ng-show>Loading..</div>
+    <div class="ng-cloak">
+      <ul>
+        <li><a href="/Application/View1">View 1</a></li>
+        <li><a href="/Application/View2">View 2</a></li>
+        <li><a href="/Application/People">People</a></li>
+      </ul>
 
-<div class="ng-cloak">
-  <ul>
-    <li><a href="/Application/View1">View 1</a></li>
-    <li><a href="/Application/View2">View 2</a></li>
-    <li><a href="/Application/People">People</a></li>
-  </ul>
+      <div data-ng-view></div>
 
-  <div data-ng-view></div>
+      @Scripts.Render("~/angular/js")
+      @Scripts.Render("~/app/js")
 
-@Scripts.Render("~/angular/js")
-@Scripts.Render("~/app/js")
-
-</div>
+    </div>
+  </div>
 </body>
 </html>
