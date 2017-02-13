@@ -9,7 +9,7 @@
   <style>
     [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
   </style>
-  <base href="/Application/"/>
+  <base href="~/"/>
 </head>
 
 <body>
@@ -21,10 +21,10 @@
 
     <div data-ng-view></div>
     
-    @Scripts.Render("~/angular/js")
-    @Scripts.Render("~/app/js")
-    @Scripts.Render("~/bundles/angular-bootstrap")
-    @Styles.Render("~/Content/css")
+@Scripts.Render("~/angular/js")
+@Scripts.Render("~/app/js")
+@Scripts.Render("~/bundles/angular-bootstrap")
+@Styles.Render("~/Content/css") 
   </div>
 </div>
 </body>

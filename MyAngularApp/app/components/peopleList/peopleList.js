@@ -5,7 +5,7 @@
     angular.module("myApp")
         .component("peopleList",
         {
-            templateUrl: "/app/components/peopleList/peopleList-template.html",
+            templateUrl: "app/components/peopleList/peopleList-template.html",
             controller: ["$http", peopleListController],
             bindings: {
                 people: "="

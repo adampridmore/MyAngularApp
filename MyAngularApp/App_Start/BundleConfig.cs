@@ -31,15 +31,13 @@ namespace MyAngularApp
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            bundles.Add(new ScriptBundle("~/app/js")
-                .IncludeDirectory("~/App","*.js",true));
+            bundles.Add(new ScriptBundle("~/App/js")
+                .IncludeDirectory("~/App", "*.js",true));
 
             bundles.Add(new ScriptBundle("~/angular/js")
                 .Include("~/Scripts/angular.js")
                 .Include("~/Scripts/angular-route.js")
                 );
-
-
         }
     }
 }

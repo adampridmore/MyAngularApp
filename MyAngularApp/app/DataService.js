@@ -4,7 +4,7 @@
         var service = {
             getPeople: function() {
                 if (people === null) {
-                    var url = "/Api/MyAppApi/123";
+                    var url = "Api/MyAppApi/123";
                     return $http
                         .get(url)
                         .then(function(responce) {

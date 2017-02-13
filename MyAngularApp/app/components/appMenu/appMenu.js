@@ -7,7 +7,7 @@
     angular.module("myApp")
         .component("appMenu",
         {
-            templateUrl: "/app/components/appMenu/appMenu-template.html",
+            templateUrl: "app/components/appMenu/appMenu-template.html",
             controller: ["$http", menuController],
             controllerAs : "vm",
             bindings: {
