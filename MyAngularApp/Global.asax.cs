@@ -17,7 +17,11 @@ namespace MyAngularApp
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 
-            //BundleTable.EnableOptimizations = true;
+#if DEBUG
+            BundleTable.EnableOptimizations = false;
+#else
+            BundleTable.EnableOptimizations = true;
+#endif
         }
     }
 }
