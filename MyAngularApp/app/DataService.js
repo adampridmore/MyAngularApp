@@ -9,6 +9,8 @@
                         .get(url)
                         .then(function(responce) {
                             people = responce.data;
+                            //console.table(people);
+
                             return people;
                         });
                 } else {
